@@ -1,0 +1,53 @@
+<html>
+	<head></head>
+
+	<body>
+		<p>
+			Hi! I would like a <span id="meat"></span> sandwich on <span id="bread"></span> bread with <span id="topping"></span>, <span id="cheese"></span>, and <span id="condiment"></span>. Thank you!
+		</p>
+	</body>
+
+	<script>
+		/* Declare your word variables */
+
+		/* 
+			Commas let you declare multiple variables in a row. This is good for organization, like keeping similar types of variables organized. 
+
+			It's the same thing as having a var at the beginning of each line and a semicolon at the end. 
+
+			var bread = ['wheat', 'rye', 'pumpernickel'],
+					meat = ['ham', 'turkey', 'roast beef', 'chicken'];
+
+			is equal to 
+
+			var bread = ['wheat', 'rye', 'pumpernickel'];
+			var meat = ['ham', 'turkey', 'roast beef', 'chicken'];
+		*/
+
+		/* Semicolons are the periods at the end of a JavaScript sentence. They tell the browser "Ok. I'm done now." */
+
+		var bread = ['wheat', 'rye', 'pumpernickel'],
+				meat = ['ham', 'turkey', 'roast beef', 'chicken'],
+				topping = ['lettuce', 'onions', 'pickles', 'tomato', 'peppers', 'avocado'],
+				cheese = ['cheddar', 'swiss', 'munster', 'provalone'],
+				condiment = ['mustard', 'mayo', 'oil'];		
+
+		var randomBread = Math.floor(Math.random() * bread.length),
+				randomMeat = Math.floor(Math.random() * meat.length),
+				randomTopping = Math.floor(Math.random() * topping.length),
+				randomCheese = Math.floor(Math.random() * cheese.length),
+				randomCondiment = Math.floor(Math.random() * condiment.length);
+
+		var breadElement = document.getElementById('bread'),
+				meatElement = document.getElementById('meat'),
+				toppingElement = document.getElementById('topping'),
+				cheeseElement = document.getElementById('cheese'),
+				condimentElement = document.getElementById('condiment');
+
+		breadElement.textContent = bread[randomBread];
+		meatElement.textContent = meat[randomMeat];
+		toppingElement.textContent = topping[randomTopping];
+		cheeseElement.textContent = cheese[randomCheese];
+		condimentElement.textContent = condiment[randomCondiment];
+	</script>
+</html>
