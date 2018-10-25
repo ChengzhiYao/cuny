@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+
+  <body>
+  	<style>
+      /* vh = 1/100 or 1% of the browser's height */
+
+  	  body { 
+        background-color: #3ABAE9; 
+        margin: 0;
+        height: 300vh;
+        font-family: 'Helvetica', sans-serif;
+      }
+
+      /* padding: top right bottom left */
+      /* padding: vertical horizontal */
+
+      .galaxy {
+        position: absolute;
+        top: 250px;
+        background: url('images/galaxy.jpg') no-repeat center center;
+        background-size: cover;
+        width: 100%;
+        height: 1050px;
+        z-index: 0;
+      }
+
+      .planet {
+        position: absolute;
+        top: 250px;
+        right: -10px;
+        width: 95%;
+        z-index: 2;
+      }
+
+      .planet img { width: 100%; }
+
+      .debris {
+        position: absolute;
+        top: 100px;
+        width: 100%;
+        z-index: 3;
+      }
+
+      .astronaut {
+        position: absolute;
+        top: 300px;
+        right: 0;
+        z-index: 4;
+      }
+  	</style>
+
+    <div class="galaxy">
+    
+    <div class="planet">
+      <img src="images/planet.png">
+    </div>
+
+    <div class="debris">
+      <img src="images/debris.png">
+    </div>
+
+    <div class="astronaut">
+      <img src="images/astronaut.png">
+    </div>
+
+  	<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>
